@@ -1,0 +1,22 @@
+{
+  "name": "ngStore",
+  "version": "0.0.0",
+  "authors": [
+    "crotten <wildrunts@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "vendor",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.2.23",
+    "angular-route": "~1.2.23",
+    "restangular": "~1.4.0",
+    "lodash": "~2.4.1"
+  }
+}

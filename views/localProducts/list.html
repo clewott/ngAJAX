@@ -1,0 +1,14 @@
+<div class="listLinks">
+  <a href="/#/products/create"><button class="createButton">Add Product</button></a>
+</div>
+
+<div class="allCookies" ng-repeat="product in products">
+  <ul class="cookies">
+    <li><h2>{{product.title}}</h2></li>
+    <li><h4>{{product.price}}</h4></li>
+    <li><p>{{product.description.substring(0, 200)}}</p></li>
+    <li class="cookieButton"><a href="#/products/{{$index}}"><button>View More</button></a></li>
+    <li class="cookieButton"><a href="#/products/{{$index}}/edit"><button>Edit Product</button></a></li>
+    <li class="cookieButton"><button ng-click="removeProduct($index)">Delete Product</button></li>
+  </ul>
+</div>

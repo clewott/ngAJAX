@@ -1,0 +1,93 @@
+body {
+  background-image: url("http://subtlepatterns.com/patterns/sandpaper.png");
+}
+
+a {
+  text-decoration: none;
+}
+
+.mainDiv {
+  text-align: center;
+  display: block;
+}
+
+.mainH2 {
+  font-size: 4em;
+}
+
+.cookie {
+  width: 150px;
+  height: 150px;
+  border-radius: 100%;
+}
+
+.createButton {
+  width: 200px;
+  height: 50px;
+  border-radius: 5px;
+  border: 1px solid black;
+  font-size: 1.5em;
+}
+
+.allCookies {
+  display: inline-block;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin-top: 20px;
+  width: 24%;
+}
+
+
+.cookies {
+  list-style-type: none;
+  padding: 0px;
+  text-align: center;
+  margin: 10px;
+}
+
+.cookieButton {
+  display: inline-block;
+}
+
+.eachProduct {
+  width: 100%;
+  text-align: center;
+}
+
+.createForm {
+  margin-left: 20px;
+}
+
+.createForm form input,textarea,button {
+  display: block;
+}
+
+.deleteButton {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.editH2 {
+  text-align: center;
+}
+
+.editForm input,textarea {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 10px;
+  width: 200px;
+}
+
+.editForm button {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 10px;
+  width: 200px;
+  height: 30px;
+  border-radius: 5px;
+  border: none;
+  background-color: #880000;
+  color: white;
+}
