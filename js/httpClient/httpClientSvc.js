@@ -18,6 +18,13 @@ angular.module("httpClient")
           });
       };
 
+      var updateItem = function (item) {
+        return $http.put(urlClient + "/" + item._id, item).then(function (responose) {
+          $rootScope.$broadcast("item:updated");
+          $log.info("item:updated");
+        });
+      };
+
       var deleteItem = function (item) {
         return $http.delete(urlClient + "/" + item._id, item).then(function (response) {
           $rootScope.$broadcast("item:deleted");
@@ -29,6 +36,7 @@ angular.module("httpClient")
         getItems: getItems,
         getItem: getItem,
         addItem: addItem,
+        updateItem: updateItem,
         deleteItem: deleteItem
       };
 

@@ -26,6 +26,11 @@ angular.module("httpClient")
         });
       };
 
+      $scope.editItem = function (item) {
+        httpClientSvc.updateItem(item).then(function () {
+        });
+      };
+
       $scope.deleteItem = function (item) {
         httpClientSvc.deleteItem(item).then(function () {
           $location.path("/shop/cart");

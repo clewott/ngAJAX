@@ -2,6 +2,7 @@
   <div>
     <h2>Add a new Cookie</h2>
     <form ng-submit="addProduct(newProduct)">
+      <input type="number" placeholder="Quantity" ng-model="newProduct.quantity">
       <input type="text" placeholder="Product Title" ng-model="newProduct.title">
       <input type="text" placeholder="Image Url" ng-model="newProduct.image">
       <input type="text" placeholder="Enter Price" ng-model="newProduct.price">

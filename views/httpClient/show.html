@@ -10,6 +10,13 @@ Item View:
     <h4>Price: {{singleProduct.price}}</h4>
     <img ng-src="{{singleProduct.image}}" style="height: 300px;">
     <p>Product Description: {{singleProduct.description}}</p>
-    <button class="deleteButton">Add To Cart</button>
+    <a href=""><button class="deleteButton" ng-click="rate = !rate">Review Item</button></a>
+    <button class="deleteButton" ng-click="addItem(product)">Add To Cart</button>
   </div>
 </div>
+
+<form ng-show="rate">
+  <h3><input type="text" placeholder="Enter Your Name" ng-model="singleProduct.reviewName"></h3>
+  <p><textarea name="" id="" cols="30" rows="10" placeholder="Enter Your Review" ng-model="singleProduct.review"></textarea></p>
+  <button ng-click="rate = !rate">Submit Review</button>
+</form>
