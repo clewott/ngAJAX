@@ -12,21 +12,21 @@ angular.module("httpClient")
       };
 
       var addItem = function (item) {
-        return $http.post(urlClient, item).then(function (response) {
+        $http.post(urlClient, item).then(function (response) {
           $rootScope.$broadcast("item:added");
           $log.info("item:added");
           });
       };
 
       var updateItem = function (item) {
-        return $http.put(urlClient + "/" + item._id, item).then(function (responose) {
+        $http.put(urlClient + "/" + item._id, item).then(function (responose) {
           $rootScope.$broadcast("item:updated");
           $log.info("item:updated");
         });
       };
 
-      var deleteItem = function (item) {
-        return $http.delete(urlClient + "/" + item._id, item).then(function (response) {
+      var deleteItem = function (id) {
+        $http.delete(urlClient + "/" + id).then(function (response) {
           $rootScope.$broadcast("item:deleted");
           $log.info("item:deleted");
         });

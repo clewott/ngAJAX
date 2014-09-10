@@ -32,12 +32,24 @@ angular.module("httpProducts")
           });
         };
 
+        var editInventoryItem = function(product) {
+
+          $http.put(urlBase + "/" + product._id, product).success(function(data) {
+
+          $rootScope.$broadcast("review:edited");
+          $log.info("review:edited");
+
+          });
+
+        };
+
         return {
             getProducts: getProducts,
             getProduct: getProduct,
             addProduct: addProduct,
             updateProduct: updateProduct,
-            deleteProduct: deleteProduct
+            deleteProduct: deleteProduct,
+            editInventoryItem: editInventoryItem
 
         };
     });

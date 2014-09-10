@@ -15,8 +15,8 @@ Item View:
   </div>
 </div>
 
-<form ng-show="rate">
-  <h3><input type="text" placeholder="Enter Your Name" ng-model="singleProduct.reviewName"></h3>
-  <p><textarea name="" id="" cols="30" rows="10" placeholder="Enter Your Review" ng-model="singleProduct.review"></textarea></p>
+<form ng-show="rate" ng-submit="addReview(review)">
+  <h3><input type="text" placeholder="Enter Your Name" ng-model="review.author"></h3>
+  <p><textarea name="" id="" cols="30" rows="10" placeholder="Enter Your Review" ng-model="review.description"></textarea></p>
   <button ng-click="rate = !rate">Submit Review</button>
 </form>

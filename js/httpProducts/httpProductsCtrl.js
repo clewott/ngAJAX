@@ -14,7 +14,13 @@ angular.module("httpProducts")
         });
 
         $scope.addProduct = function (product) {
-          httpProductsSvc.addProduct(product).then(function () {
+          httpProductsSvc.addProduct({
+            title:product.title,
+            image:product.image,
+            price:product.price,
+            description:product.description,
+            reviews: []
+          }).then(function () {
             $location.path("/httpproducts");
           });
         };

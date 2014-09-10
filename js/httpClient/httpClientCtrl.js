@@ -21,18 +21,47 @@ angular.module("httpClient")
       });
 
       $scope.addItem = function (item) {
-        httpClientSvc.addItem(item).then(function () {
+        var newItem = {
+          title:item.title,
+          image:item.image,
+          price:item.price,
+          description:item.description
+        }
+        httpClientSvc.addItem(newItem).then(function () {
           $location.path("/shop");
         });
       };
+
+      $scope.addReview = function(review) {
+
+      httpProductsSvc.getProduct($routeParams.id).success(function(product) {
+
+        $scope.singleProduct = product;
+        $log.info($scope.singleProduct);
+        $scope.singleProduct.reviews.push({
+
+          reviewAuthor:review.author,
+          reviewDescription:review.description,
+          reviewDate:new Date()
+
+        });
+
+        httpProductsSvc.editInventoryItem(product);
+
+      });
+
+      $scope.review = {};
+
+    };
 
       $scope.editItem = function (item) {
         httpClientSvc.updateItem(item).then(function () {
         });
       };
 
-      $scope.deleteItem = function (item) {
-        httpClientSvc.deleteItem(item).then(function () {
+      $scope.deleteItem = function (id) {
+        $log.info(id)
+        httpClientSvc.deleteItem(id).then(function () {
           $location.path("/shop/cart");
         });
       };
