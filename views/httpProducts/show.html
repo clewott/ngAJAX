@@ -1,0 +1,13 @@
+<div>
+<a href="/#/products">Back To List Of Products</a>
+</div>
+
+<div class="eachProduct">
+  <div class="specificProduct">
+    <h2>{{theProduct.title}}</h2>
+    <h4>Price: {{theProduct.price}}</h4>
+    <img ng-src="{{theProduct.image}}" style="height: 300px;">
+    <p>Product Description: {{theProduct.description}}</p>
+    <button class="deleteButton" ng-click="removeProduct($index)">Delete Product</button>
+  </div>
+</div>

@@ -1,7 +1,8 @@
  angular.module("ngProduct",
     ["localProducts",
      "restangularPosts",
-     "httpPosts",
+     "httpProducts",
+     "httpClient",
      "ngRoute"
      ])
 
@@ -19,4 +20,3 @@
 });
 
 angular.module("restangularPosts", []);
-angular.module("httpPosts", []);

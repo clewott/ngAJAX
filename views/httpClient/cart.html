@@ -1,0 +1,11 @@
+<h2>This Is Your Cart:</h2>
+
+<div class="allCookies" ng-repeat="product in products">
+  <ul class="cookies">
+    <li><h2>{{product.title}}</h2></li>
+    <li><h4>{{product.price}}</h4></li>
+    <li><p>{{product.description.substring(0, 200)}}</p></li>
+    <li class="cookieButton"><a href="#/shop/{{product._id}}"><button>View More</button></a></li>
+    <li class="cookieButton"><button ng-click="deleteItem(item._id)">Remove From Cart</button></li>
+  </ul>
+</div>

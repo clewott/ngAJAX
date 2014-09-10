@@ -1,0 +1,14 @@
+<div>
+  <a href="#/"><button>Home Page</button></a>
+  <a href="#/shop/cart"><button>View Cart</button></a>
+</div>
+
+<div class="allCookies" ng-repeat="product in products">
+  <ul class="cookies">
+    <li><h2>{{product.title}}</h2></li>
+    <li><h4>{{product.price}}</h4></li>
+    <li><p>{{product.description.substring(0, 200)}}</p></li>
+    <li class="cookieButton"><a href="#/shop/{{product._id}}"><button>View More</button></a></li>
+    <li class="cookieButton"><button ng-click="addItem(product)">Add To Cart</button></li>
+  </ul>
+</div>

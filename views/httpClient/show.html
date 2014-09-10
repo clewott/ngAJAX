@@ -1,0 +1,15 @@
+Item View:
+
+<a href="#/shop"><button>Back To All Items</button></a>
+<a href="#/shop/cart"><button>Go To Cart</button></a>
+
+
+<div class="eachProduct">
+  <div class="specificProduct">
+    <h2>{{singleProduct.title}}</h2>
+    <h4>Price: {{singleProduct.price}}</h4>
+    <img ng-src="{{singleProduct.image}}" style="height: 300px;">
+    <p>Product Description: {{singleProduct.description}}</p>
+    <button class="deleteButton">Add To Cart</button>
+  </div>
+</div>

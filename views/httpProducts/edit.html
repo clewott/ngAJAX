@@ -1,0 +1,11 @@
+<div class="editH2">
+  <h2>Update The Cookie</h2>
+</div>
+
+<form class="editForm" ng-submit="editProduct(singleProduct)">
+  <h2><input type="text" ng-model="singleProduct.title" value="singleProduct.title"></h2>
+  <h3><input type="text" ng-model="singleProduct.image" value="singleProduct.image"></h3>
+  <h3><input type="text" ng-model="singleProduct.price" value="singleProduct.price"></h3>
+  <p><textarea name="" id="" cols="30" rows="10" ng-model="singleProduct.description">{{singleProduct.description}}</textarea></p>
+  <button type="submit">Update Product</button>
+</form>
