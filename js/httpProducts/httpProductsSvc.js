@@ -1,7 +1,7 @@
 angular.module("httpProducts")
     .factory("httpProductsSvc", function ($rootScope, $log, $http) {
 
-        var urlBase = "http://tiy-fee-rest.herokuapp.com/collections/crottenHttpProduct";
+        var urlBase = "http://tiy-august.herokuapp.com/collections/crottenHttpProduct";
 
         var getProducts = function () {
           return $http.get(urlBase);

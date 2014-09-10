@@ -1,12 +1,13 @@
 <h2>This Is Your Cart:</h2>
+<a href="#/shop"><button>View All Items</button></a>
 
-<div class="allCookies" ng-repeat="product in products">
+<div class="allCookies" ng-repeat="item in items">
   <ul class="cookies">
-    <input type="number" value="{{product.quantity}}" ng-model="product.quantity">
-    <li><h2>{{product.title}}</h2></li>
-    <li><h4>{{product.price}}</h4></li>
-    <li><p>{{product.description.substring(0, 200)}}</p></li>
+    <input type="number" value="{{item.quantity}}">
+    <li><h2>{{item.title}}</h2></li>
+    <li><h4>{{item.price}}</h4></li>
+    <li><p>{{item.description.substring(0, 200)}}</p></li>
     <li class="cookieButton"><a href="#/shop/{{product._id}}"><button>View More</button></a></li>
-    <li class="cookieButton"><button ng-submit="editItem(item)" ng-click="deleteItem(singleItem)">Remove From Cart</button></li>
+    <li class="cookieButton"><button ng-click="deleteItem(item)">Remove From Cart</button></li>
   </ul>
 </div>
