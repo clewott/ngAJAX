@@ -4,6 +4,13 @@
 </div>
 
 <div class="allCookies" ng-repeat="product in products">
+  <product-directive title="{{product.title}}" price="{{product.price}}" description="{{product.description}}"></product-directive>
+    <a href="#/httpproducts/{{product._id}}/edit"><button>Edit Product</button></a>
+    <button ng-click="deleteProduct(product)">Delete Product</button>
+</div>
+
+
+<!-- <div class="allCookies" ng-repeat="product in products">
   <ul class="cookies">
     <li><h2>{{product.title}}</h2></li>
     <li><h4>{{product.price}}</h4></li>
@@ -11,4 +18,4 @@
     <li class="cookieButton"><a href="#/httpproducts/{{product._id}}/edit"><button>Edit Product</button></a></li>
     <li class="cookieButton"><button ng-click="deleteProduct(product)">Delete Product</button></li>
   </ul>
-</div>
+</div> -->

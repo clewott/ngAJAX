@@ -3,7 +3,8 @@
      "restangularPosts",
      "httpProducts",
      "httpClient",
-     "ngRoute"
+     "ngRoute",
+     "app.directives"
      ])
 
 .config(function ($routeProvider) {

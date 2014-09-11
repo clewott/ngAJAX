@@ -2,12 +2,21 @@
 <a href="#/shop"><button>View All Items</button></a>
 
 <div class="allCookies" ng-repeat="item in items">
+  <cart-directive quantity="{{item.quantity}}" title="{{item.title}}" price="{{item.price}}" image="{{item.image}}" description="{{item.description}}"></cart-directive>
+  <a href="#/shop/{{item._id}}"><button>View More</button></a>
+  <button ng-click="deleteItem(item._id)">Remove From Cart</button>
+  <p>SubTotal: {{item.quantity * item.price | currency}}</p>
+</div>
+
+
+<!-- <div class="allCookies" ng-repeat="item in items">
   <ul class="cookies">
     <input type="number" value="{{item.quantity}}">
     <li><h2>{{item.title}}</h2></li>
     <li><h4>{{item.price}}</h4></li>
+    <li><img src="{{item.image}}" alt=""></li>
     <li><p>{{item.description.substring(0, 200)}}</p></li>
-    <li class="cookieButton"><a href="#/shop/{{product._id}}"><button>View More</button></a></li>
+    <li class="cookieButton"><a href="#/shop/{{item._id}}"><button>View More</button></a></li>
     <li class="cookieButton"><button ng-click="deleteItem(item._id)">Remove From Cart</button></li>
   </ul>
-</div>
+</div> -->

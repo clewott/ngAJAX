@@ -22,6 +22,7 @@ angular.module("httpClient")
 
       $scope.addItem = function (item) {
         var newItem = {
+          quantity:item.quantity,
           title:item.title,
           image:item.image,
           price:item.price,

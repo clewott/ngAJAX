@@ -11,7 +11,7 @@ Item View:
     <img ng-src="{{singleProduct.image}}" style="height: 300px;">
     <p>Product Description: {{singleProduct.description}}</p>
     <a href=""><button class="deleteButton" ng-click="rate = !rate">Review Item</button></a>
-    <button class="deleteButton" ng-click="addItem(product)">Add To Cart</button>
+    <button class="deleteButton" ng-click="addItem(singleProduct)">Add To Cart</button>
   </div>
 </div>
 
@@ -20,3 +20,9 @@ Item View:
   <p><textarea name="" id="" cols="30" rows="10" placeholder="Enter Your Review" ng-model="review.description"></textarea></p>
   <button ng-click="rate = !rate">Submit Review</button>
 </form>
+
+<div ng-repeat="review in singleProduct.reviews">
+  <p>Review: {{review.reviewDescription}}</p>
+  <h4>Reviewed By: {{review.reviewAuthor}}</h4>
+  <h4>Reviewed On: {{review.reviewDate | date : format : timezone}}</h4>
+</div>

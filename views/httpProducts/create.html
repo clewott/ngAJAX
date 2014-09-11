@@ -2,10 +2,9 @@
   <div>
     <h2>Add a new Cookie</h2>
     <form ng-submit="addProduct(newProduct)">
-      <input type="number" placeholder="Quantity" ng-model="newProduct.quantity">
       <input type="text" placeholder="Product Title" ng-model="newProduct.title">
       <input type="text" placeholder="Image Url" ng-model="newProduct.image">
-      <input type="text" placeholder="Enter Price" ng-model="newProduct.price">
+      <input type="number" placeholder="Enter Price" ng-model="newProduct.price">
       <textarea name="" id="" cols="30" rows="10" placeholder="Enter Product Description" ng-model="newProduct.description"></textarea>
       <button type="submit">Add Product</button>
       <a href="#/httpproducts"><button>Cancel</button></a>

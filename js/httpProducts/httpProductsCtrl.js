@@ -15,6 +15,7 @@ angular.module("httpProducts")
 
         $scope.addProduct = function (product) {
           httpProductsSvc.addProduct({
+            quantity:1,
             title:product.title,
             image:product.image,
             price:product.price,
