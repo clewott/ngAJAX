@@ -1,10 +1,15 @@
-<h2>This Is Your Cart:</h2>
-<a href="#/shop"><button>View All Items</button></a>
+<div class="row">
+  <div class="col-xs-12 mainNav">
+    <a href="#/shop"><button class="btn btn-info">Back To All Items</button></a>
+  </div>
+</div>
+<hr>
 
-<div class="allCookies" ng-repeat="item in items">
+<h2>This Is Your Cart:</h2>
+
+<div class="cartCookies col-sm-4" ng-repeat="item in items">
   <cart-directive quantity="{{item.quantity}}" title="{{item.title}}" price="{{item.price}}" image="{{item.image}}" description="{{item.description}}"></cart-directive>
-  <a href="#/shop/{{item._id}}"><button>View More</button></a>
-  <button ng-click="deleteItem(item._id)">Remove From Cart</button>
+  <button class="btn btn-danger" ng-click="deleteItem(item._id)">Remove From Cart</button>
   <p>SubTotal: {{item.quantity * item.price | currency}}</p>
 </div>
 

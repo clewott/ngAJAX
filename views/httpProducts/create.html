@@ -1,13 +1,17 @@
+<div class="row">
+  <div class="col-xs-12 mainNav">
+    <a href="#/httpproducts"><button class="btn btn-warning">Cancel</button></a>
+  </div>
+</div>
+<hr>
+
 <div class="createForm">
-  <div>
     <h2>Add a new Cookie</h2>
     <form ng-submit="addProduct(newProduct)">
-      <input type="text" placeholder="Product Title" ng-model="newProduct.title">
-      <input type="text" placeholder="Image Url" ng-model="newProduct.image">
-      <input type="number" placeholder="Enter Price" ng-model="newProduct.price">
-      <textarea name="" id="" cols="30" rows="10" placeholder="Enter Product Description" ng-model="newProduct.description"></textarea>
-      <button type="submit">Add Product</button>
-      <a href="#/httpproducts"><button>Cancel</button></a>
+      <h3><input type="text" placeholder="Product Title" ng-model="newProduct.title"></h3>
+      <h3><input type="text" placeholder="Image Url" ng-model="newProduct.image"></h3>
+      <h3><input type="number" placeholder="Enter Price" ng-model="newProduct.price"></h3>
+      <p><textarea name="" id="" cols="30" rows="10" placeholder="Enter Product Description" ng-model="newProduct.description"></textarea></p>
+      <button class="btn btn-success" type="submit">Add Product</button>
     </form>
-  </div>
 </div>

@@ -1,13 +1,18 @@
-<div class="listLinks">
-  <a href="#/"><button>Home Page</button></a>
-  <a href="/#/httpproducts/create"><button class="createButton">Add Product</button></a>
+<div class="row">
+  <div class="col-xs-12 mainNav">
+    <a href="#/"><button class="btn btn-info">Home Page</button></a>
+    <a href="/#/httpproducts/create"><button class="btn btn-success"><i class="fa fa-plus-square"></i></button></a>
+  </div>
+</div>
+<hr>
+
+<h2>Item's In Your Account:</h2>
+<div class="col-sm-4 specificItem" ng-repeat="product in products">
+  <product-directive title="{{product.title}}" price="{{product.price}}" image="{{product.image}}" description="{{product.description}}"></product-directive>
+    <a href="#/httpproducts/{{product._id}}/edit"><button class="btn btn-warning"><i class="fa fa-pencil-square-o"></i></button></a>
+    <button class="btn btn-danger" ng-click="deleteProduct(product)">Delete Product</button>
 </div>
 
-<div class="allCookies" ng-repeat="product in products">
-  <product-directive title="{{product.title}}" price="{{product.price}}" description="{{product.description}}"></product-directive>
-    <a href="#/httpproducts/{{product._id}}/edit"><button>Edit Product</button></a>
-    <button ng-click="deleteProduct(product)">Delete Product</button>
-</div>
 
 
 <!-- <div class="allCookies" ng-repeat="product in products">

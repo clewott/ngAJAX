@@ -1,12 +1,15 @@
-<div>
-  <a href="#/"><button>Home Page</button></a>
-  <a href="#/shop/cart"><button>View Cart</button></a>
+<div class="row">
+  <div class="col-xs-12 mainNav">
+    <a href="#/"><button class="btn btn-info">Home Page</button></a>
+    <a href="#/shop/cart"><button class="btn btn-success"><i class="fa fa-shopping-cart"></i></button></a>
+  </div>
 </div>
+<hr>
 
-<div class="allCookies" ng-repeat="product in products">
-  <product-directive title="{{product.title}}" price="{{product.price}}" description="{{product.description}}"></product-directive>
-  <a href="#/shop/{{product._id}}"><button>View More</button></a>
-  <button ng-click="addItem(product)">Add To Cart</button>
+<div class="col-sm-4 specificItem" ng-repeat="product in products">
+  <product-directive title="{{product.title}}" price="{{product.price}}" image="{{product.image}}" description="{{product.description}}"></product-directive>
+  <a href="#/shop/{{product._id}}"><button class="btn btn-info">View More</button></a>
+  <button class="btn btn-success" ng-click="addItem(product)"><i class="fa fa-shopping-cart"></i></button>
 </div>
 
 

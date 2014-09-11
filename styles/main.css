@@ -1,0 +1,87 @@
+body {
+  background-image: Url("http://subtlepatterns.com/patterns/restaurant_icons.png"); }
+
+h2 {
+  text-align: center; }
+
+.mainNav {
+  text-align: right; }
+  .mainNav button {
+    font-size: 1.5em;
+    margin-top: 10px;
+    margin-right: 10px; }
+
+.mainHeading {
+  text-align: center; }
+  .mainHeading h2 {
+    font-size: 5em; }
+
+.specificItem {
+  border: 1px solid grey;
+  margin: 5px;
+  border-radius: 5px;
+  text-align: center; }
+  .specificItem .list {
+    list-style-type: none;
+    padding: 0px; }
+    .specificItem .list img {
+      max-width: 100%; }
+  .specificItem button {
+    margin-bottom: 10px; }
+
+.createForm, .editForm {
+  text-align: center;
+  width: 100%;
+  font-size: 1.5em; }
+  .createForm form, .editForm form {
+    width: 100%; }
+    .createForm form input, .createForm form textarea, .editForm form input, .editForm form textarea {
+      width: 40%;
+      border: 1px solid lightgrey;
+      border-radius: 5px; }
+    .createForm form button, .editForm form button {
+      margin-bottom: 10px;
+      font-size: 1.5em; }
+
+.specificProduct {
+  text-align: center;
+  border-radius: 5px;
+  background-color: rgba(245, 245, 245, 0.3); }
+  .specificProduct button {
+    font-size: 1.5em;
+    margin-bottom: 10px; }
+
+.reviewForm {
+  text-align: center;
+  border-radius: 5px; }
+  .reviewForm form {
+    width: 100%; }
+    .reviewForm form input, .reviewForm form textarea {
+      width: 40%;
+      border: 1px solid lightgrey;
+      border-radius: 5px; }
+    .reviewForm form button {
+      margin-bottom: 10px;
+      font-size: 1.5em; }
+
+.reviewColumn {
+  margin-left: 10px; }
+  .reviewColumn .leftReviews {
+    text-align: left; }
+  .reviewColumn .eachReview {
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+    width: 25%; }
+
+.cartCookies {
+  border: 1px solid grey;
+  margin: 5px;
+  border-radius: 5px;
+  text-align: center; }
+  .cartCookies .list {
+    list-style-type: none;
+    padding: 0px; }
+    .cartCookies .list img {
+      max-width: 50%; }
+  .cartCookies button {
+    margin-bottom: 10px; }
