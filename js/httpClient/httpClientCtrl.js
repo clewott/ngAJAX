@@ -28,7 +28,7 @@ angular.module("httpClient")
           price:item.price,
           description:item.description
         }
-        httpClientSvc.addItem(newItem).then(function () {
+        httpClientSvc.addItem(newItem).success(function () {
           $location.path("/shop");
         });
       };
@@ -62,13 +62,13 @@ angular.module("httpClient")
 
       $scope.deleteItem = function (id) {
         $log.info(id)
-        httpClientSvc.deleteItem(id).then(function () {
+        httpClientSvc.deleteItem(id).success(function () {
           $location.path("/shop/cart");
         });
       };
 
-      $scope.checkoutTotal = httpClientSvc.checkoutTotal();
-      $log.info($scope.checkoutTotal);
+      $scope.cartTotal = httpClientSvc.cartTotal();
+      $log.info($scope.cartTotal);
 
       $rootScope.$on("item:added",  function() {
         httpClientSvc.getItems().then(function (items) {

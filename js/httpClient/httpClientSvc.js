@@ -32,7 +32,7 @@ angular.module("httpClient")
         });
       };
 
-      var checkoutTotal = function() {
+      var cartTotal = function() {
         var total = 0;
         getItems().success(function(item) {
           console.log(item);
@@ -44,7 +44,7 @@ angular.module("httpClient")
       };
 
       return {
-        checkoutTotal: checkoutTotal,
+        cartTotal: cartTotal,
         getItems: getItems,
         getItem: getItem,
         addItem: addItem,
