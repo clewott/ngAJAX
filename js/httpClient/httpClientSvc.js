@@ -39,6 +39,7 @@ angular.module("httpClient")
           for (var i = 0; i < item.length; i++) {
             total += (item[i].price * item[i].quantity);
           };
+          console.log(total);
           return total;
         });
       };

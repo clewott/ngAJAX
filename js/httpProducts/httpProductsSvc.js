@@ -32,12 +32,12 @@ angular.module("httpProducts")
           });
         };
 
-        var editInventoryItem = function(product) {
+        var addReview = function(product) {
 
           $http.put(urlBase + "/" + product._id, product).success(function(data) {
 
-          $rootScope.$broadcast("review:edited");
-          $log.info("review:edited");
+          $rootScope.$broadcast("review:added");
+          $log.info("review:added");
 
           });
 
@@ -49,7 +49,7 @@ angular.module("httpProducts")
             addProduct: addProduct,
             updateProduct: updateProduct,
             deleteProduct: deleteProduct,
-            editInventoryItem: editInventoryItem
+            addReview: addReview
 
         };
     });

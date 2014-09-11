@@ -1,23 +1,24 @@
 angular.module("httpClient")
     .controller("httpClientCtrl", function ($scope,$log,$location,httpProductsSvc, $routeParams, $rootScope, httpClientSvc) {
+      $scope.cartTotal = 0;
+
       httpProductsSvc.getProducts().then(function (products) {
-        console.log(products);
         $scope.products = products.data;
       });
 
       httpProductsSvc.getProduct($routeParams.id).then(function (response) {
         $scope.singleProduct = response.data;
-        console.log(response)
       });
 
       httpClientSvc.getItems().then(function (items) {
-        console.log(items);
         $scope.items = items.data;
+        for (var i = 0; i < items.data.length; i++) {
+          $scope.cartTotal += (items.data[i].price * items.data[i].quantity);
+        };
       });
 
       httpClientSvc.getItem($routeParams.id).then(function (response) {
         $scope.singleItem = response.data;
-        console.log(response)
       });
 
       $scope.addItem = function (item) {
@@ -47,7 +48,7 @@ angular.module("httpClient")
 
         });
 
-        httpProductsSvc.editInventoryItem(product);
+        httpProductsSvc.addReview(product);
 
       });
 
@@ -67,8 +68,10 @@ angular.module("httpClient")
         });
       };
 
-      $scope.cartTotal = httpClientSvc.cartTotal();
-      $log.info($scope.cartTotal);
+      // $scope.cartTotal = httpClientSvc.cartTotal;
+
+      // $log.info($scope.cartTotal);
+
 
       $rootScope.$on("item:added",  function() {
         httpClientSvc.getItems().then(function (items) {
