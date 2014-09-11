@@ -5,10 +5,28 @@
 </div>
 <hr>
 
-<h2>This Is Your Cart:</h2>
+<div class="row">
+  <div class="col-md-12">
+    <h2 ng-init="checkoutTotal()">Total In Cart = {{checkoutTotal() | currency}}</h2>
+  </div>
+</div>
 
 <div class="cartCookies col-sm-4" ng-repeat="item in items">
-  <cart-directive quantity="{{item.quantity}}" title="{{item.title}}" price="{{item.price}}" image="{{item.image}}" description="{{item.description}}"></cart-directive>
+  Qty: <select value="{{item.quantity}}" ng-model="item.quantity">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+        </select>
+  <cart-directive title="{{item.title}}" price="{{item.price}}" image="{{item.image}}" description="{{item.description}}"></cart-directive>
   <button class="btn btn-danger" ng-click="deleteItem(item._id)">Remove From Cart</button>
   <p>SubTotal: {{item.quantity * item.price | currency}}</p>
 </div>

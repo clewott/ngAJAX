@@ -67,6 +67,9 @@ angular.module("httpClient")
         });
       };
 
+      $scope.checkoutTotal = httpClientSvc.checkoutTotal();
+      $log.info($scope.checkoutTotal);
+
       $rootScope.$on("item:added",  function() {
         httpClientSvc.getItems().then(function (items) {
           $scope.items = items.data;

@@ -14,16 +14,14 @@
       <h3>Price: {{singleProduct.price | currency}}</h3>
       <img ng-src="{{singleProduct.image}}" style="height: 300px;">
       <p>Product Description: {{singleProduct.description}}</p>
-      <button class="btn btn-primary" ng-click="rate = !rate"><i class="fa fa-comments-o"></i></button>
       <button class="btn btn-success" ng-click="addItem(singleProduct)"><i class="fa fa-shopping-cart"></i></button>
     </div>
     <div class="col-md-6 reviewForm">
-      <form ng-show="rate">
+      <form ng-submit="addReview(review)">
         <h2>Review {{singleProduct.title}}</h2>
         <h3><input type="text" placeholder="Enter Your Name" ng-model="review.author"></h3>
         <p><textarea name="" id="" cols="30" rows="10" placeholder="Enter Your Review" ng-model="review.description"></textarea></p>
-        <button ng-submit="addReview(review)" class="btn btn-success" ng-click="rate = !rate">Submit Review</button>
-        <button class="btn btn-danger" ng-click="rate = !rate"><i class="fa fa-times"></i></button>
+        <button type="submit" class="btn btn-success">Submit Review</button>
       </form>
     </div>
   </div>
@@ -34,5 +32,6 @@
   <div class="eachReview" ng-repeat="review in singleProduct.reviews">
     <h5>Reviewed On: {{review.reviewDate | date : format : timezone}} by {{review.reviewAuthor}}</h5>
     <p>Review: {{review.reviewDescription}}</p>
+    <hr>
   </div>
 </div>

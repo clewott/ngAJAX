@@ -16,17 +16,17 @@ h2 {
   .mainHeading h2 {
     font-size: 5em; }
 
-.specificItem {
+.specificItem, .cartCookies {
   border: 1px solid grey;
   margin: 5px;
   border-radius: 5px;
   text-align: center; }
-  .specificItem .list {
+  .specificItem .list, .cartCookies .list {
     list-style-type: none;
     padding: 0px; }
-    .specificItem .list img {
+    .specificItem .list img, .cartCookies .list img {
       max-width: 100%; }
-  .specificItem button {
+  .specificItem button, .cartCookies button {
     margin-bottom: 10px; }
 
 .createForm, .editForm {
@@ -69,19 +69,4 @@ h2 {
   .reviewColumn .leftReviews {
     text-align: left; }
   .reviewColumn .eachReview {
-    border: 1px solid lightgrey;
-    border-radius: 5px;
     width: 25%; }
-
-.cartCookies {
-  border: 1px solid grey;
-  margin: 5px;
-  border-radius: 5px;
-  text-align: center; }
-  .cartCookies .list {
-    list-style-type: none;
-    padding: 0px; }
-    .cartCookies .list img {
-      max-width: 50%; }
-  .cartCookies button {
-    margin-bottom: 10px; }

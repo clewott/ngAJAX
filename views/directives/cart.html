@@ -1,13 +1,6 @@
 <ul class="cartDirective list">
-  <select value="{{quantity}}">
-      <option value="1">1</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-      <option value="5">5</option>
-    </select>
   <li><h2>{{title}}</h2></li>
-  <li><h4>{{price | currency}}</h4></li>
+  <li><h4>Price: {{price | currency}}</h4></li>
   <li><img src="{{image}}" alt=""></li>
-  <li><p>{{description.substring(0, 200)}}</p></li>
+  <li><p>Description: {{description.substring(0, 200)}}</p></li>
 </ul>
