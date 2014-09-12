@@ -7,7 +7,7 @@
 <hr>
 
 <h2>Item's In Your Account:</h2>
-<div class="col-sm-4 specificItem" ng-repeat="product in products">
+<div class="col-sm-12 specificItem" ng-repeat="product in products">
   <product-directive title="{{product.title}}" price="{{product.price}}" image="{{product.image}}" description="{{product.description}}"></product-directive>
     <a href="#/httpproducts/{{product._id}}/edit"><button class="btn btn-warning"><i class="fa fa-pencil-square-o"></i></button></a>
     <button class="btn btn-danger" ng-click="deleteProduct(product)">Delete Product</button>
