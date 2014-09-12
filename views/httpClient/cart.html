@@ -26,6 +26,7 @@
             <option value="11">11</option>
             <option value="12">12</option>
         </select>
+      <button ng-click="editItem(item)">Update Qty</button>
   <cart-directive title="{{item.title}}" price="{{item.price}}" image="{{item.image}}" description="{{item.description}}"></cart-directive>
   <button class="btn btn-danger" ng-click="deleteItem(item._id)">Remove From Cart</button>
   <p>SubTotal: {{item.quantity * item.price | currency}}</p>

@@ -1,6 +1,7 @@
 angular.module("httpClient")
     .factory("httpClientSvc", function ($rootScope, $log, $http) {
 
+
       var urlClient = "http://chshackathon.herokuapp.com/collections/httpClient";
 
       var getItems = function () {

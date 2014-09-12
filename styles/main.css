@@ -16,17 +16,29 @@ h2 {
   .mainHeading h2 {
     font-size: 5em; }
 
-.specificItem, .cartCookies {
+.specificItem {
+  margin: 5px;
+  text-align: center; }
+  .specificItem .list {
+    list-style-type: none;
+    padding: 0px; }
+    .specificItem .list img {
+      max-width: 100%;
+      max-height: 50%; }
+  .specificItem button {
+    margin-bottom: 10px; }
+
+.cartCookies {
   border: 1px solid grey;
   margin: 5px;
   border-radius: 5px;
   text-align: center; }
-  .specificItem .list, .cartCookies .list {
+  .cartCookies .list {
     list-style-type: none;
     padding: 0px; }
-    .specificItem .list img, .cartCookies .list img {
+    .cartCookies .list img {
       max-width: 100%; }
-  .specificItem button, .cartCookies button {
+  .cartCookies button {
     margin-bottom: 10px; }
 
 .createForm, .editForm {

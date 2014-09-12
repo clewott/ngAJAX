@@ -4,7 +4,8 @@
      "httpProducts",
      "httpClient",
      "ngRoute",
-     "app.directives"
+     "app.directives",
+     "ui.utils"
      ])
 
 .config(function ($routeProvider) {

@@ -22,7 +22,23 @@ h2 {
   }
 }
 
-.specificItem, .cartCookies {
+.specificItem {
+  margin: 5px;
+  text-align: center;
+  .list {
+    list-style-type: none;
+    padding: 0px;
+    img {
+      max-width: 100%;
+      max-height: 50%;
+    }
+  }
+  button {
+    margin-bottom: 10px;
+  }
+}
+
+.cartCookies {
   border: 1px solid grey;
   margin: 5px;
   border-radius: 5px;

@@ -1,5 +1,5 @@
 angular.module("httpClient")
-    .controller("httpClientCtrl", function ($scope,$log,$location,httpProductsSvc, $routeParams, $rootScope, httpClientSvc) {
+    .controller("httpClientCtrl", function ($scope,$log,$location,httpProductsSvc, $routeParams, $rootScope, httpClientSvc, $route) {
       $scope.cartTotal = 0;
 
       httpProductsSvc.getProducts().then(function (products) {
@@ -79,9 +79,17 @@ angular.module("httpClient")
         });
       });
 
+      $rootScope.$on("item:updated",  function() {
+        httpClientSvc.getItems().then(function (items) {
+          $scope.items = items.data;
+          $route.reload();
+        });
+      });
+
       $rootScope.$on("item:deleted",  function() {
         httpClientSvc.getItems().then(function (items) {
           $scope.items = items.data;
+          $route.reload();
         });
       });
     });
