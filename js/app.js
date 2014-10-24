@@ -1,6 +1,5 @@
  angular.module("ngProduct",
     ["localProducts",
-     "restangularPosts",
      "httpProducts",
      "httpClient",
      "ngRoute",
