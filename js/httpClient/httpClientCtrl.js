@@ -29,8 +29,9 @@ angular.module("httpClient")
           price:item.price,
           description:item.description
         }
+        $scope.items.push(newItem)
         httpClientSvc.addItem(newItem).success(function () {
-          $location.path("/shop");
+          $location.path("/shop/cart");
         });
       };
 
@@ -76,6 +77,7 @@ angular.module("httpClient")
       $rootScope.$on("item:added",  function() {
         httpClientSvc.getItems().then(function (items) {
           $scope.items = items.data;
+          $route.reload();
         });
       });
 
