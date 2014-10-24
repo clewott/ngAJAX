@@ -1,7 +1,7 @@
 <div class="row">
   <div class="col-xs-12 mainNav">
     <a href="#/"><button class="btn btn-info">Home Page</button></a>
-    <a href="/#/httpproducts/create"><button class="btn btn-success"><i class="fa fa-plus-square"></i></button></a>
+    <a href="/httpproducts/create"><button class="btn btn-success"><i class="fa fa-plus-square"></i></button></a>
   </div>
 </div>
 <hr>
@@ -12,15 +12,3 @@
     <a href="#/httpproducts/{{product._id}}/edit"><button class="btn btn-warning"><i class="fa fa-pencil-square-o"></i></button></a>
     <button class="btn btn-danger" ng-click="deleteProduct(product)">Delete Product</button>
 </div>
-
-
-
-<!-- <div class="allCookies" ng-repeat="product in products">
-  <ul class="cookies">
-    <li><h2>{{product.title}}</h2></li>
-    <li><h4>{{product.price}}</h4></li>
-    <li><p>{{product.description.substring(0, 200)}}</p></li>
-    <li class="cookieButton"><a href="#/httpproducts/{{product._id}}/edit"><button>Edit Product</button></a></li>
-    <li class="cookieButton"><button ng-click="deleteProduct(product)">Delete Product</button></li>
-  </ul>
-</div> -->
