@@ -5,16 +5,16 @@ angular.module("httpProducts",
 .config(function ($routeProvider) {
 
    $routeProvider
+       .when("/httpproducts", {
+           templateUrl: "views/httpProducts/list.html",
+           controller: "httpProductsCtrl"
+       })
        .when("/httpproducts/create", {
            templateUrl: "views/httpProducts/create.html",
            controller: "httpProductsCtrl"
        })
        .when("/httpproducts/:id/edit", {
            templateUrl: "views/httpProducts/edit.html",
-           controller: "httpProductsCtrl"
-       })
-       .when("/httpproducts", {
-           templateUrl: "views/httpProducts/list.html",
            controller: "httpProductsCtrl"
        })
        .when("/httpproducts/:id", {
